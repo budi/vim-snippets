@@ -7,7 +7,7 @@
 #
 
 snippet rcc "create class component" b
-import React, { ${1:PropTypes, }Component } from 'react';
+import React, { ${1:PropTypes, }Component } from 'react'
 
 class ${2:ClassComponent} extends Component {
 
@@ -17,11 +17,11 @@ class ${2:ClassComponent} extends Component {
 			${4:<div>
 			  $5
 			</div>}
-		);
+		)
 	}
 }
 
-${3:export default $2;}
+${3:export default $2}
 endsnippet
 
 #
@@ -29,7 +29,7 @@ endsnippet
 #
 
 snippet funCom "create simple functional component" b
-import React from 'react';
+import React from 'react'
 
 const ${1:functionalComponent} = (${2:props}) => {
   $0
@@ -37,10 +37,10 @@ const ${1:functionalComponent} = (${2:props}) => {
     ${3:<div>
 		  $4
 		</div>}
-  );
-};
+  )
+}
 
-export default $1;
+export default $1
 endsnippet
 
 #
@@ -48,15 +48,15 @@ endsnippet
 #
 
 snippet classCom "create cimple class component" b
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class ${1:ClassComponent} extends Component {
   constructor(props) {
-		super(props);
+		super(props)
 
 		${2:this.state = {
 		  $3
-		};}
+		}}
 	}
 
   $0
@@ -65,11 +65,11 @@ class ${1:ClassComponent} extends Component {
 		  ${4:<div>
         $5
 			</div>}
-		);
+		)
 	}
 }
 
-export default $1;
+export default $1
 endsnippet
 
 #
@@ -77,23 +77,23 @@ endsnippet
 #
 
 snippet impR "import React from 'react'" b
-import React from 'react';
+import React from 'react'
 $0
 endsnippet
 
 snippet impD "import ReactDOM from 'react-dom'" b
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
 $0
 endsnippet
 
 snippet impRD "import React & ReactDOM" b
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 $0
 endsnippet
 
 snippet impC "import component" b
-import $1 from '$2';
+import $1 from '$2'
 $0
 endsnippet
 
@@ -105,19 +105,19 @@ $0
 endsnippet
 
 snippet expdef "export default" b
-export default $0;
+export default $0
 endsnippet
 
 #
 ## return jsx
 #
 
-snippet ret() "return ();" b
+snippet ret() "return ()" b
 return (
   ${1:<div>
     $2
 	</div>}
-);
+)
 endsnippet
 
 #
@@ -125,7 +125,7 @@ endsnippet
 #
 
 snippet cs "React.addons.classSet" b
-var cx = React.addons.classSet;
+var cx = React.addons.classSet
 endsnippet
 
 snippet cdm "component did mount" b
@@ -173,18 +173,18 @@ endsnippet
 snippet cx
 cx({
 	${1}: ${2}
-});
+})
 endsnippet
 
 snippet fup
-forceUpdate(${1:callback});
+forceUpdate(${1:callback})
 endsnippet
 
 snippet gdp "get default props" b
 getDefaultProps() {
 	return {
 		${1}
-	};
+	}
 }$0
 endsnippet
 
@@ -198,7 +198,7 @@ render() {
 		${1:<div>
 		  $2
 		</div>}
-	);
+	)
 }
 $0
 endsnippet
@@ -209,11 +209,11 @@ endsnippet
 
 snippet constr "construct state" b
 constructor(props) {
-  super(props);
+  super(props)
 
   ${1:this.state = {
 	  $2
-	};}
+	}}
 }
 
 $0
@@ -223,7 +223,7 @@ snippet gis "get initial state" b
 getInitialState() {
 	return {
 		${1}: ${2}
-	};
+	}
 }
 
 $0
@@ -238,7 +238,7 @@ endsnippet
 snippet sst "set state" b
 this.setState({
 	${1}: ${2}
-});$0
+})$0
 endsnippet
 
 snippet props "get property" i
@@ -250,7 +250,7 @@ this.state.${1}
 endsnippet
 
 snippet trp
-this.transferPropsTo(${VISUAL}$0);
+this.transferPropsTo(${VISUAL}$0)
 endsnippet
 
 #
@@ -258,7 +258,7 @@ endsnippet
 #
 
 snippet domren "render component to DOM" b
-ReactDOM.render(${1:<$2 />}, document.${3:querySelector('$4')});
+ReactDOM.render(${1:<$2 />}, document.${3:querySelector('$4')})
 endsnippet
 
 #
@@ -266,18 +266,18 @@ endsnippet
 #
 
 snippet impBAC "import bindActionCreators from redux" b
-import { bindActionCreators } from 'redux';
+import { bindActionCreators } from 'redux'
 endsnippet
 
 snippet impConn "import connect from react-redux" b
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 endsnippet
 
 snippet mstp "mapStateToProps" b
 function mapStateToProps(state) {
   return {
 	  $1
-	};
+	}
 }
 endsnippet
 
@@ -285,12 +285,12 @@ snippet mdtp "mapDispatchToProps" b
 function mapDispatchToProps(dispatch) {
   return {
 	  $1
-	};
+	}
 }
 endsnippet
 
 snippet expConn "export default connect()()" b
-export default connect(${1:mapStateToProps}${2:, }${3:mapDispatchToProps})($4);
+export default connect(${1:mapStateToProps}${2:, }${3:mapDispatchToProps})($4)
 endsnippet
 
 #
@@ -298,23 +298,23 @@ endsnippet
 #
 
 snippet impL "import Link from react-router" b
-import { Link } from 'react-router';
+import { Link } from 'react-router'
 endsnippet
 
 snippet routes "import Route, IndexRoute" b
-import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import React from 'react'
+import { Route, IndexRoute } from 'react-router'
 
-import ${1} from '${2}';
-import ${3} from '${4}';
-import ${6} from '${7}';
+import ${1} from '${2}'
+import ${3} from '${4}'
+import ${6} from '${7}'
 $0
 export default (
   <Route path="/" component={$1}>
 	  <IndexRoute component={$3} />
 		<Route path="${5}" component={$6} />
 	</Route>
-);
+)
 endsnippet
 
 snippet link "add react-router link"
